@@ -1,0 +1,77 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<!-- <h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li>
+</ul>
+
+<div class="container">
+  <app-login></app-login>
+</div>
+<div class="container">
+  <app-register></app-register>
+</div>
+<div class="container">
+  <app-add></app-add>
+</div>
+
+<div class="container">
+  <app-search></app-search>
+</div>
+
+<div class="container">
+  <app-content-prj>
+    <h2>alert from app component</h2>
+  </app-content-prj>
+  <app-content-prj alertType="danger">
+    <h2>alert danger</h2>
+  </app-content-prj>
+</div>
+
+<div class="container">
+  <app-card>
+    <img class="card-img-top" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_166d3da3c7f%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_166d3da3c7f%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.203125%22%20y%3D%2296.3%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+      alt="Card image cap">
+    <p>bla bla Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, illo?</p>
+    <p><a href="#" class="btn btn-primary">lol</a></p>
+    <h5 class="card-title">Title here</h5>
+  </app-card>
+</div> -->
+
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/login">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/register']">Register</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/order']">Order</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/tinh-tuoi']">Tinh tuoi</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" [routerLink]="['/product', 'list']">Product List</a>
+  </li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<footer>
+  &copy;2018 hhh
+</footer>

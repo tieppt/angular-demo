@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<div class="container">
+  <div class="alert alert-success" role="alert">
+    Success!
+  </div>
+  <app-product-detail></app-product-detail>
+  <!-- <app-home></app-home> -->
+
+  <!-- <app-profile-card *ngIf="me" [user]="me" (deleted)="onDelete($event)"></app-profile-card> -->
+  <!-- <app-profile-card [user]="bob"></app-profile-card> -->
+
+  <!-- <app-timer [time]="time" (ended)="onTimerEnded()"></app-timer> -->
+  <!-- <app-timer time="15"></app-timer> -->
+
+  <app-profile-card *ngFor="let u of users; index as i" [user]="u" (deleted)="onListDelete(i)">
+  </app-profile-card>
+
+  <app-slide-show></app-slide-show>
+
+  <ul>
+    <li *ngFor="let item of showArr; trackBy: arrTrackBy">
+      {{item.id}}
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  <button class="btn btn-danger" (click)="toggle()">
+    Toggle
+  </button>
+  <app-color-block *ngIf="show"></app-color-block>
+  <app-tree *ngFor="let node of tree" [node]="node"></app-tree>
+</div>
+
+
+<div class="container">
+  <app-user-form></app-user-form>
+
+  <app-template-container></app-template-container>
+
+
+  <app-demo-pipe></app-demo-pipe>
+</div>

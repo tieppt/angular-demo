@@ -1,0 +1,16 @@
+<div class="form-group">
+  <input type="text" class="form-control" (change)="onChange($event)">
+</div>
+<div class="form-group">
+  <button class="btn btn-primary" (click)="toggle()">Toggle</button>
+</div>
+
+<div *ngIf="show && url; else elseImg" class="form-group">
+  <img [src]="url" alt="" class="img-fluid">
+</div>
+
+<ng-template #elseImg>
+  <div class="form-group">
+    Anh ko hien thi
+  </div>
+</ng-template>

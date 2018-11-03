@@ -1,0 +1,45 @@
+<p>
+  user-list works!
+</p>
+<div class="container">
+  <p>
+    <a class="btn btn-primary" [routerLink]="['/users', 'new']">Create</a>
+  </p>
+</div>
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Email</th>
+        <th>Image</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>
+          <a [routerLink]="['/users', user.id]">{{user.id}}</a>
+        </td>
+        <td>{{user.name | titlecase}}</td>
+        <td>{{user.role}}</td>
+        <td>{{user.email}}</td>
+        <td>
+          <div style="max-width: 100px;">
+            <img *ngIf="user.image; else noImage" [src]="user.image" [alt]="user.name" class="img-fluid">
+          </div>
+        </td>
+        <td>
+          <a class="btn btn-primary" [routerLink]="['/users', user.id, 'edit']">Edit</a>
+          <button class="btn btn-danger" (click)="delete(user)">X</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noImage>
+  <p>No image</p>
+</ng-template>

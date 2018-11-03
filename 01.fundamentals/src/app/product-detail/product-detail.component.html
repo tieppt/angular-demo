@@ -1,0 +1,18 @@
+<p>
+  product-detail works!
+</p>
+
+<div>
+  <input type="text" class="form-control" [value]="img" (change)="onChange($event)">
+</div>
+<div>
+  <button class="btn btn-info" (click)="update()">Update</button>
+</div>
+<div>
+  <img [src]="img" alt="" class="img-fluid">
+  <p>
+    <a [href]="img" target="_blank" rel="noopener noreferrer">
+      {{img}}
+    </a>
+  </p>
+</div>

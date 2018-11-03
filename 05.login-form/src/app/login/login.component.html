@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-lg-6 mx-auto">
+      <mat-card>
+        <header>
+          <h3 class="heading text-center">Login</h3>
+        </header>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Email" type="email" formControlName="email">
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field class="w-100">
+              <input matInput placeholder="Password" type="password" formControlName="password">
+            </mat-form-field>
+          </div>
+          <div class="form-group row">
+            <div class="col-8 mx-auto">
+              <button mat-raised-button color="primary" class="w-100 log-button">Submit</button>
+            </div>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+<hr>

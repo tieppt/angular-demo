@@ -1,0 +1,54 @@
+<form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()" class="row justify-content-md-center">
+  <div class="col-md-8">
+    <div class="form-group row">
+      <label for="Username" class="col-md-2 col-form-label">Username:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="text" id="Username" formControlName="username" [ngClass]="{
+          'is-invalid': !loginForm.get('username').valid && loginForm.get('username').touched,
+          'is-valid': loginForm.get('username').valid
+        }">
+      </div>
+    </div>
+    <div class="form-group alert alert-danger" role="alert" *ngIf="loginForm.get('username').errors &&
+        loginForm.get('username').touched">
+      <span *ngIf="loginForm.hasError('required', ['username'])">
+        Username is required
+      </span>
+      <span *ngIf="loginForm.hasError('minlength', ['username'])">
+        Min length
+        {{loginForm.getError('minlength', ['username']).requiredLength}}
+      </span>
+    </div>
+
+    <div class="form-group row">
+      <label for="Password" class="col-md-2 col-form-label">Password:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="password" id="Password" formControlName="pass" [ngClass]="{
+          'is-invalid': !loginForm.get('pass').valid && loginForm.get('pass').touched,
+          'is-valid': loginForm.get('pass').valid
+        }">
+      </div>
+    </div>
+
+    <div class="form-group alert alert-danger" role="alert" *ngIf="loginForm.get('pass').errors &&
+        loginForm.get('pass').touched">
+      <span *ngIf="loginForm.hasError('required', ['pass'])">
+        Password is required
+      </span>
+      <span *ngIf="loginForm.hasError('minlength', ['pass'])">
+        Min length
+        {{loginForm.getError('minlength', ['pass']).requiredLength}}
+      </span>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-md-10 offset-md-2">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+<pre>
+{{loginForm.value | json}}
+</pre>

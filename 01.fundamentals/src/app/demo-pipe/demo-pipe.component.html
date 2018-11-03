@@ -1,0 +1,23 @@
+<p>
+  demo-pipe works!
+</p>
+
+<div class="product-item">
+  <p>
+    <img [src]="product.image" alt="" class="img-fluid">
+  </p>
+  <p>
+    Publish date: {{ product.name | titlecase}}
+  </p>
+
+  <p>
+    Price: {{product.price | currency:'VND'}}
+    <br> Publish date: {{ product.date | date:'d-M-yyyy'}}
+    <br>
+    Publish date: {{ product.date | fdate:'Do-Mo-YYYY'}}
+  </p>
+</div>
+
+<pre>
+{{product | json}}
+</pre>

@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "tiep",
+      "role": "admin",
+      "email": "email@example.com",
+      "image": "https://www.partnersforhealthypets.org/healthypetcheckup/assets/pets-fcb53b73523cd42be71be807ca0d6aaf.jpg"
+    },
+    {
+      "id": 2,
+      "name": "bobbbbbbbbb",
+      "role": "user",
+      "email": "bob@example.com"
+    },
+    {
+      "id": 3,
+      "name": "KANT",
+      "role": "admin",
+      "email": "ka@kc.com",
+      "image": "https://cdn.newsapi.com.au/image/v1/67a523605bca40778c6faaad93883a3b"
+    }
+  ]
+}

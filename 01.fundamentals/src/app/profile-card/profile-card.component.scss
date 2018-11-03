@@ -1,0 +1,43 @@
+::ng-deep p {
+  color: orchid !important;
+}
+
+:host {
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.left,
+.right {
+  width: 50%;
+}
+
+.m-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.m-icon {
+  width: 32px;
+  height: 32px;
+  background: paleturquoise;
+  margin-right: 10px;
+}
+
+.username {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.user__title {
+  font-size: 10px;
+  color: #999999;
+}

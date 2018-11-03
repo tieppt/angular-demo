@@ -1,0 +1,14 @@
+<p>
+  tinh-tuoi works!
+</p>
+<div class="form-group">
+  <input type="text" class="form-control" [formControl]="input">
+</div>
+
+<div class="form-group">
+  <button class="btn btn-primary" (click)="onClick()">Tinh</button>
+</div>
+
+<div class="alert alert-info" *ngIf="output">
+  {{output}}
+</div>

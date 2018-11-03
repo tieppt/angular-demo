@@ -1,0 +1,26 @@
+<p>
+  template-container works!
+</p>
+<button class="btn btn-primary" (click)="editMode = !editMode">Edit</button>
+<table>
+  <tbody>
+    <ng-template [ngIf]="editMode" [ngIfElse]="showMode">
+      <tr *ngFor="let item of arr">
+        <td><input type="text" [value]="item"></td>
+      </tr>
+    </ng-template>
+  </tbody>
+
+</table>
+
+<ng-template #showMode>
+  <tr *ngFor="let item of arr">
+    <td>{{ item }}</td>
+  </tr>
+</ng-template>
+
+
+<hr>
+<ng-template [ngIf]="arr.length > 3">
+  <div *ngFor="let item of arr"> {{ item }} </div>
+</ng-template>

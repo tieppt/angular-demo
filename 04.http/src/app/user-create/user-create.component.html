@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto">
+      <form [formGroup]="create" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input type="number" class="form-control" formControlName="id">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" formControlName="name">
+        </div>
+        <div class="form-group">
+          <select class="form-control" formControlName="role">
+            <option>Chon</option>
+            <option *ngFor="let role of roles" [value]="role">{{role | titlecase}}</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control" formControlName="email">
+        </div>
+
+        <div class="form-group">
+          <input type="url" class="form-control" formControlName="image">
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

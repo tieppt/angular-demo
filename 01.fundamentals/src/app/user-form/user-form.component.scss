@@ -1,0 +1,6 @@
+.body {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
